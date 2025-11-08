@@ -29,6 +29,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+CLAUDE.md
 
 # OS files
 Thumbs.db
