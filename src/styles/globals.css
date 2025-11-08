@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #0a0a14;
+  --foreground: #00ff41;
+  --card: #1a1a2e;
+  --card-foreground: #00ff41;
+  --popover: #1a1a2e;
+  --popover-foreground: #00ff41;
+  --primary: #ff006e;
+  --primary-foreground: #ffffff;
+  --secondary: #8338ec;
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a3e;
+  --muted-foreground: #a0a0c0;
+  --accent: #ffbe0b;
+  --accent-foreground: #0a0a14;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: #00ff41;
+  --input: transparent;
+  --input-background: #1a1a2e;
+  --switch-background: #2a2a3e;
+  --font-weight-medium: 400;
+  --font-weight-normal: 400;
+  --ring: #00ff41;
+  --chart-1: #ff006e;
+  --chart-2: #8338ec;
+  --chart-3: #00ff41;
+  --chart-4: #ffbe0b;
+  --chart-5: #fb5607;
+  --radius: 0px;
+  --sidebar: #1a1a2e;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #ff006e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2a2a3e;
+  --sidebar-accent-foreground: #00ff41;
+  --sidebar-border: #00ff41;
+  --sidebar-ring: #00ff41;
+}
+
+.dark {
+  --background: #0a0a14;
+  --foreground: #00ff41;
+  --card: #1a1a2e;
+  --card-foreground: #00ff41;
+  --popover: #1a1a2e;
+  --popover-foreground: #00ff41;
+  --primary: #ff006e;
+  --primary-foreground: #ffffff;
+  --secondary: #8338ec;
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a3e;
+  --muted-foreground: #a0a0c0;
+  --accent: #ffbe0b;
+  --accent-foreground: #0a0a14;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #00ff41;
+  --input: #1a1a2e;
+  --ring: #00ff41;
+  --font-weight-medium: 400;
+  --font-weight-normal: 400;
+  --chart-1: #ff006e;
+  --chart-2: #8338ec;
+  --chart-3: #00ff41;
+  --chart-4: #ffbe0b;
+  --chart-5: #fb5607;
+  --sidebar: #1a1a2e;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #ff006e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2a2a3e;
+  --sidebar-accent-foreground: #00ff41;
+  --sidebar-border: #00ff41;
+  --sidebar-ring: #00ff41;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: 24px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.8;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.8;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.8;
+    }
+
+    h4 {
+      font-size: 12px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.8;
+    }
+
+    p {
+      font-size: 10px;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.8;
+    }
+
+    label {
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.8;
+    }
+
+    button {
+      font-size: 10px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.8;
+    }
+
+    input {
+      font-size: 10px;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.8;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Pixel animations */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.pixel-corners {
+  clip-path: polygon(
+    0 8px,
+    8px 8px,
+    8px 0,
+    calc(100% - 8px) 0,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0 calc(100% - 8px)
+  );
+}
+
+.scanline {
+  position: relative;
+}
+
+.scanline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(0, 255, 65, 0.05) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1000;
+}
