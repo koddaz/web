@@ -29,7 +29,7 @@ const projects: Project[] = [
     id: 1,
     title: 'MyCrave - Restaurant Finder',
     period: '2024',
-    description: 'En iOS-app för att hitta restauranger nära dig med integrerad kartfunktion och platsbaserade tjänster. Publicerad på App Store.',
+    description: 'En iOS-app för att hitta restauranger nära dig med integrerad kartfunktion och platsbaserade tjänster. Publicerad på App Store. I detta gruppprojekt har jag varit bidragande i design, men framförallt hanterat implementeringen av Google Maps och Location',
     technologies: ['Swift', 'SwiftUI', 'Google Maps API', 'Location API'],
     status: 'COMPLETED',
     highlights: [
