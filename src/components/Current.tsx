@@ -3,9 +3,16 @@ import { PixelCard } from './PixelCard';
 import { Zap, Calendar, BookOpen, BarChart3, Camera, Shield, Star } from 'lucide-react';
 import { PixelButton } from './PixelButton';
 import { GithubIcon } from './icons/GithubIcon';
-import screenshot1 from '../img/emmisense/Screenshot_1762622686.png';
-import screenshot2 from '../img/emmisense/Screenshot_1762622845.png';
-
+import screenshot1 from '../img/emmisense/login.jpg';
+import screenshot2 from '../img/emmisense/login2.jpg';
+import screenshot3 from '../img/emmisense/home.jpg';
+import screenshot4 from '../img/emmisense/input.jpg'
+import screenshot5 from '../img/emmisense/input2.jpg'
+import screenshot6 from '../img/emmisense/settings.jpg'
+import screenshot7 from '../img/emmisense/settings2.jpg'
+import screenshot8 from '../img/emmisense/stats.jpg'
+import screenshot9 from '../img/emmisense/entry.jpg'
+import screenshot10 from '../img/emmisense/history.jpg'
 export function Current() {
   return (
     <div className="space-y-8 scanline">
@@ -129,6 +136,54 @@ export function Current() {
                 <img
                   src={screenshot2}
                   alt="emmiSense screenshot 2"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                <img
+                  src={screenshot3}
+                  alt="emmiSense screenshot 3"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot4}
+                  alt="emmiSense screenshot 4"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot5}
+                  alt="emmiSense screenshot 5"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot6}
+                  alt="emmiSense screenshot 6"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot7}
+                  alt="emmiSense screenshot 7"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot8}
+                  alt="emmiSense screenshot 8"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot9}
+                  alt="emmiSense screenshot 9"
+                  className="border-4 border-foreground pixel-corners w-full h-auto"
+                  style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
+                />
+                 <img
+                  src={screenshot10}
+                  alt="emmiSense screenshot 10"
                   className="border-4 border-foreground pixel-corners w-full h-auto"
                   style={{ boxShadow: '6px 6px 0 rgba(0, 255, 65, 0.3)' }}
                 />
