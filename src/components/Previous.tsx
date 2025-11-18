@@ -30,7 +30,7 @@ const projects: Project[] = [
     title: 'MyCrave - Restaurant Finder',
     period: '2024',
     description: 'En iOS-app för att hitta restauranger nära dig med integrerad kartfunktion och platsbaserade tjänster. Publicerad på App Store. I detta gruppprojekt har jag varit bidragande i design, men framförallt hanterat implementeringen av Google Maps och Location',
-    technologies: ['Swift', 'SwiftUI', 'Google Maps API', 'Location API'],
+    technologies: ['Swift', 'SwiftUI', 'Maps API', 'Location API'],
     status: 'COMPLETED',
     highlights: [
       'Publicerad på App Store',
@@ -89,12 +89,12 @@ export function Previous() {
               <p className="leading-relaxed text-xs md:text-base">{project.description}</p>
 
               <div>
-                <h3 className="text-accent mb-2 text-xs md:text-sm">TEKNOLOGIER</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="text-accent mb-3 text-xs md:text-sm">TEKNOLOGIER</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
                   {project.technologies.map((tech) => (
                     <div
                       key={tech}
-                      className="bg-secondary border-2 border-secondary px-2 py-1 md:px-3 md:py-1 pixel-corners"
+                      className="bg-secondary border-2 border-secondary px-2 py-1 md:px-3 md:py-2 text-center pixel-corners"
                     >
                       <p className="text-secondary-foreground text-xs md:text-sm">{tech}</p>
                     </div>
