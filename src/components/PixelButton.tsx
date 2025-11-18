@@ -29,10 +29,9 @@ export function PixelButton({
     <button
       onClick={onClick}
       className={`
-        px-6 py-3 
-        border-4 
-        transition-all 
-        duration-100 
+        border-4
+        transition-all
+        duration-100
         active:translate-y-1
         pixel-corners
         ${variantStyles[variant]}

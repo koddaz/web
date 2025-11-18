@@ -62,8 +62,8 @@ export function Previous() {
   return (
     <div className="space-y-8 scanline">
       <div className="text-center">
-        <h1 className="text-primary mb-2">PREVIOUS PROJECTS</h1>
-        <p className="text-accent">{'> SLUTFÖRDA PROJEKT <'}</p>
+        <h1 className="text-primary mb-2 text-sm md:text-2xl">PREVIOUS PROJECTS</h1>
+        <p className="text-accent text-xs md:text-base">{'> SLUTFÖRDA PROJEKT <'}</p>
       </div>
 
       <div className="grid gap-8">
@@ -72,43 +72,43 @@ export function Previous() {
             <div className="space-y-4">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div className="flex-1 min-w-[250px]">
-                  <div className="flex items-center gap-3 mb-2">
-                    <CheckCircle className="w-6 h-6 text-primary" />
-                    <h2 className="text-primary">{project.title}</h2>
+                  <div className="flex items-center gap-2 md:gap-3 mb-2">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                    <h2 className="text-primary text-sm md:text-lg">{project.title}</h2>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
-                    <Calendar className="w-4 h-4" />
-                    <p>{project.period}</p>
+                    <Calendar className="w-3 h-3 md:w-4 md:h-4" />
+                    <p className="text-xs md:text-base">{project.period}</p>
                   </div>
                 </div>
-                <div className="bg-primary px-4 py-2 pixel-corners">
-                  <p className="text-primary-foreground">{project.status}</p>
+                <div className="bg-primary px-3 py-1 md:px-4 md:py-2 pixel-corners">
+                  <p className="text-primary-foreground text-xs md:text-base">{project.status}</p>
                 </div>
               </div>
 
-              <p className="leading-relaxed">{project.description}</p>
+              <p className="leading-relaxed text-xs md:text-base">{project.description}</p>
 
               <div>
-                <h3 className="text-accent mb-2">TEKNOLOGIER</h3>
+                <h3 className="text-accent mb-2 text-xs md:text-sm">TEKNOLOGIER</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <div
                       key={tech}
-                      className="bg-secondary border-2 border-secondary px-3 py-1 pixel-corners"
+                      className="bg-secondary border-2 border-secondary px-2 py-1 md:px-3 md:py-1 pixel-corners"
                     >
-                      <p className="text-secondary-foreground">{tech}</p>
+                      <p className="text-secondary-foreground text-xs md:text-sm">{tech}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h3 className="text-accent mb-2">HÖJDPUNKTER</h3>
+                <h3 className="text-accent mb-2 text-xs md:text-sm">HÖJDPUNKTER</h3>
                 <div className="space-y-2">
                   {project.highlights.map((highlight, index) => (
                     <div key={index} className="flex items-start gap-2">
-                      <Star className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                      <p className="leading-relaxed">{highlight}</p>
+                      <Star className="w-3 h-3 md:w-4 md:h-4 text-accent mt-1 flex-shrink-0" />
+                      <p className="leading-relaxed text-xs md:text-sm">{highlight}</p>
                     </div>
                   ))}
                 </div>
@@ -116,8 +116,8 @@ export function Previous() {
 
               {project.screenshots && project.screenshots.length > 0 && (
                 <div>
-                  <h3 className="text-accent mb-3">SKÄRMDUMPAR</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  <h3 className="text-accent mb-3 text-xs md:text-sm">SKÄRMDUMPAR</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
                     {project.screenshots.map((screenshot, index) => (
                       <img
                         key={index}
@@ -134,10 +134,10 @@ export function Previous() {
               {project.appStoreLink && (
                 <div className="flex gap-4 pt-4 border-t-2 border-foreground flex-wrap">
                   <a href={project.appStoreLink} target="_blank" rel="noopener noreferrer">
-                    <PixelButton variant="primary">
+                    <PixelButton variant="primary" className="px-4 py-2 m-1">
                       <span className="flex items-center gap-2">
-                        <ExternalLink className="w-4 h-4" />
-                        VIEW ON APP STORE
+                        <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
+                        <span className="text-xs md:text-base">VIEW ON APP STORE</span>
                       </span>
                     </PixelButton>
                   </a>

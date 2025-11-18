@@ -7,20 +7,20 @@ export function Hero() {
     <div className="space-y-8 scanline">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div className="flex items-center justify-center gap-4">
-          <Terminal className="w-12 h-12 text-primary animate-pulse" />
-          <h1 className="text-primary">ALBERT NIKLASSON</h1>
-          <Terminal className="w-12 h-12 text-primary animate-pulse" />
+        <div className="flex items-center justify-center gap-2 md:gap-4">
+          <Terminal className="w-6 h-6 md:w-12 md:h-12 text-primary animate-pulse" />
+          <h1 className="text-primary text-sm md:text-2xl">ALBERT NIKLASSON</h1>
+          <Terminal className="w-6 h-6 md:w-12 md:h-12 text-primary animate-pulse" />
         </div>
-        <p className="text-accent">{'> FULL STACK DEVELOPER <'}</p>
+        <p className="text-accent text-xs md:text-base">{'> FULL STACK DEVELOPER <'}</p>
       </div>
 
       {/* About Section */}
       <PixelCard glitch>
         <div className="space-y-4">
-          <div className="flex items-center gap-3 mb-4">
-            <User className="w-6 h-6 text-accent" />
-            <h2 className="text-accent">OM MIG</h2>
+          <div className="flex items-center gap-2 md:gap-3 mb-4">
+            <User className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+            <h2 className="text-accent text-sm md:text-lg">OM MIG</h2>
           </div>
           <p className="leading-relaxed">
             Jag är en passionerad utvecklare som älskar att skapa innovativa lösningar.
@@ -37,9 +37,9 @@ export function Hero() {
       {/* Experience Section */}
       <PixelCard>
         <div className="space-y-4">
-          <div className="flex items-center gap-3 mb-4">
-            <Briefcase className="w-6 h-6 text-secondary" />
-            <h2 className="text-secondary">ERFARENHET</h2>
+          <div className="flex items-center gap-2 md:gap-3 mb-4">
+            <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
+            <h2 className="text-secondary text-sm md:text-lg">ERFARENHET</h2>
           </div>
           <div className="space-y-6">
             <div className="border-l-4 border-primary pl-4">
@@ -58,9 +58,9 @@ export function Hero() {
       {/* Education Section */}
       <PixelCard>
         <div className="space-y-4">
-          <div className="flex items-center gap-3 mb-4">
-            <GraduationCap className="w-6 h-6 text-accent" />
-            <h2 className="text-accent">UTBILDNING</h2>
+          <div className="flex items-center gap-2 md:gap-3 mb-4">
+            <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+            <h2 className="text-accent text-sm md:text-lg">UTBILDNING</h2>
           </div>
           <div className="space-y-4">
             <div className="border-l-4 border-primary pl-4">
@@ -77,8 +77,8 @@ export function Hero() {
       {/* Skills */}
       <PixelCard glitch>
         <div className="space-y-4">
-          <h2 className="text-primary mb-4">SKILLS</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <h2 className="text-primary mb-4 text-sm md:text-lg">SKILLS</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {['Swift', 'SwiftUI', 'Kotlin', 'Jetpack Compose', 'React Native', 'TypeScript', 'Python', 'PostgreSQL', 'Figma', 'Git'].map((skill) => (
               <div
                 key={skill}

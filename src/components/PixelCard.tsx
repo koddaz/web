@@ -10,11 +10,11 @@ export function PixelCard({ children, className = '', glitch = false }: PixelCar
   return (
     <div
       className={`
-        bg-card 
-        text-card-foreground 
-        border-4 
-        border-foreground 
-        p-6 
+        bg-card
+        text-card-foreground
+        border-4
+        border-foreground
+        p-6
         pixel-corners
         ${glitch ? 'hover:animate-[glitch_0.3s_ease-in-out]' : ''}
         ${className}
